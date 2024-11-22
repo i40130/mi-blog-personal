@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura Moderna</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="theme-switch-wrapper">
+                <span class="theme-icons" id="sun-icon">☀️</span>
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" onchange="toggleTheme()">
+                    <span class="slider"></span>
+                </label>
+                <span class="theme-icons" id="moon-icon">🌙</span>
+            </div>
+            <h1>Mi blog personal</h1>
+            <nav class="site-nav">
+                <a href="index.html">Inicio</a>
+                <a href="contact.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="article-hero">
+                <img src="https://images.unsplash.com/photo-1580096485057-74207bd67947" alt="Arquitectura Moderna">
+            </div>
+            <div class="article-content">
+                <h1>Arquitectura Moderna</h1>
+                <div class="tags">
+                    <span class="tag">Diseño</span>
+                    <span class="tag">Arquitectura</span>
+                </div>
+                <div class="article-meta">
+                    <img src="https://images.unsplash.com/photo-1589363460779-cd717d2ed8fa" alt="Autor" class="author-image">
+                    <span>Por Iago Moure | 20 de noviembre de 2024</span>
+                </div>
+                <p>La arquitectura moderna continúa desafiando nuestra percepción del espacio y la forma. A través de principios de diseño innovadores y prácticas sostenibles, los arquitectos están creando espacios que responden tanto a las necesidades ambientales como humanas.</p>
+                <p>Este artículo explora las últimas tendencias en diseño arquitectónico y cómo están dando forma a nuestros paisajes urbanos.</p>
+                <div class="pagination">
+                    <a href="article2.html" class="pagination-button">Anterior</a>
+                    <a href="article1.html" class="pagination-button">Siguiente</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Acerca de</h3>
+                    <p>Un blog personal sobre estilo de vida, moda y arquitectura.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes sociales</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/theme.js"></script>
+</body>
+</html>
