@@ -1,4 +1,5 @@
 :root {
+    /* Light theme (default) */
     --primary-font: 'Playfair Display', serif;
     --secondary-font: 'Lato', sans-serif;
     --text-color: #2d3436;
@@ -12,6 +13,74 @@
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
     --transition-speed: 0.3s;
+    --footer-bg: #f8f9fa;
+    --footer-text: #636e72;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --text-color: #f5f6fa;
+    --text-light: #b2bec3;
+    --accent-color: #74b9ff;
+    --accent-hover: #0984e3;
+    --background-color: #2d3436;
+    --background-alt: #1e272e;
+    --footer-bg: #1e272e;
+    --footer-text: #b2bec3;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.2);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Theme toggle switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: var(--spacing-unit);
+    top: var(--spacing-unit);
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 48px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--text-light);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: var(--transition-speed);
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: var(--background-color);
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: var(--transition-speed);
+    width: 16px;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
 }
 
 html {
@@ -200,6 +269,109 @@ h3 {
     margin: 2rem 0;
 }
 
+/* Footer styles */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: calc(var(--spacing-unit) * 2) 0;
+    margin-top: calc(var(--spacing-unit) * 4);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-unit);
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-unit);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.footer-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-unit);
+}
+
+.social-links a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Contact form styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-unit);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-unit);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: calc(var(--spacing-unit) * 0.5);
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: calc(var(--spacing-unit) * 0.5);
+    border: 1px solid var(--text-light);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: calc(var(--spacing-unit) * 0.75) var(--spacing-unit);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-hover);
+}
 .pagination-button {
     padding: 0.5rem 1rem;
     border: 1px solid var(--text-color);
