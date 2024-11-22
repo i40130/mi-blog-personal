@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura Moderna</title>
-    <link rel="stylesheet" href="/static/css/normalize.css">
+    <title>Contacto - Mi blog personal</title>
+    <link rel="stylesheet" href="./static/css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body>
     <header class="site-header">
@@ -22,35 +22,37 @@
             </div>
             <h1>Mi blog personal</h1>
             <nav class="site-nav">
-                <a href="/">Inicio</a>
-                <a href="/contact">Contacto</a>
+                <a href="./index.html">Inicio</a>
+                <a href="./contact.html">Contacto</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <article>
-            <div class="article-hero">
-                <img src="https://images.unsplash.com/photo-1580096485057-74207bd67947" alt="Arquitectura Moderna">
+        <div class="container">
+            <h1>Contacto</h1>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar mensaje</button>
+                </form>
             </div>
-            <div class="article-content">
-                <h1>Arquitectura Moderna</h1>
-                <div class="tags">
-                    <span class="tag">Diseño</span>
-                    <span class="tag">Arquitectura</span>
-                </div>
-                <div class="article-meta">
-                    <img src="https://images.unsplash.com/photo-1589363460779-cd717d2ed8fa" alt="Autor" class="author-image">
-                    <span>Por Iago Moure | 20 de noviembre de 2024</span>
-                </div>
-                <p>La arquitectura moderna continúa desafiando nuestra percepción del espacio y la forma. A través de principios de diseño innovadores y prácticas sostenibles, los arquitectos están creando espacios que responden tanto a las necesidades ambientales como humanas.</p>
-                <p>Este artículo explora las últimas tendencias en diseño arquitectónico y cómo están dando forma a nuestros paisajes urbanos.</p>
-                <div class="pagination">
-                    <a href="/article/2" class="pagination-button">Anterior</a>
-                    <a href="/article/1" class="pagination-button">Siguiente</a>
-                </div>
-            </div>
-        </article>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -63,8 +65,8 @@
                 <div class="footer-section">
                     <h3>Enlaces</h3>
                     <ul class="footer-links">
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/contact">Contacto</a></li>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./contact.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -78,6 +80,6 @@
             </div>
         </div>
     </footer>
-    <script src="/static/js/theme.js"></script>
+    <script src="./static/js/theme.js"></script>
 </body>
 </html>
