@@ -497,3 +497,94 @@ h3 {
         height: 300px;
     }
 }
+
+/* Print Styles */
+@media print {
+    /* Reset background colors and text for better print quality */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    /* Hide non-essential elements */
+    .theme-switch-wrapper,
+    .site-nav,
+    .site-footer,
+    .social-links,
+    .pagination {
+        display: none !important;
+    }
+
+    /* Optimize headers */
+    .site-header {
+        padding: 1cm 0;
+        box-shadow: none;
+        text-align: left;
+    }
+
+    /* Adjust article layout */
+    .article-content {
+        margin: 0;
+        padding: 1cm 0;
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .article-hero img {
+        max-height: 15cm;
+    }
+
+    /* Ensure proper page breaks */
+    article {
+        page-break-before: always;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+
+    /* Show URLs for links */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        font-style: italic;
+    }
+
+    /* Remove shadows and transitions */
+    * {
+        box-shadow: none !important;
+        transition: none !important;
+    }
+
+    /* Adjust article grid for print */
+    .article-grid {
+        display: block;
+    }
+
+    .article-card {
+        margin-bottom: 1cm;
+        break-inside: avoid;
+    }
+
+    /* Optimize form display */
+    .contact-form {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        border: 1px solid #000;
+    }
+
+    /* Set paper margins */
+    @page {
+        margin: 2cm;
+    }
+}
