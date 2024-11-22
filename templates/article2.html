@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Urban Fashion Trends{% endblock %}
+
+{% block content %}
+<article>
+    <div class="article-hero">
+        <img src="https://images.unsplash.com/photo-1580150674494-d5f0682cee6f" alt="Urban Fashion">
+    </div>
+    <div class="article-content">
+        <h1>Urban Fashion Trends</h1>
+        <div class="article-meta">
+            <img src="https://images.unsplash.com/photo-1592914637125-28479601c75a" alt="Author" class="author-image">
+            <span>By Michael Chen | June 16, 2023</span>
+        </div>
+        <p>The urban fashion landscape is constantly evolving, blending street style with high fashion in unprecedented ways. This season, we're seeing a revival of vintage elements with a modern twist.</p>
+        <p>From sustainable fashion choices to bold statement pieces, urban fashion continues to push boundaries and redefine contemporary style.</p>
+        <div class="pagination">
+            <a href="/article/1" class="pagination-button">Previous</a>
+            <a href="/article/3" class="pagination-button">Next</a>
+        </div>
+    </div>
+</article>
+{% endblock %}
