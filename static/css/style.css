@@ -1,4 +1,60 @@
 :root {
+    /* Existing variables... */
+    --tag-bg: rgba(128, 128, 128, 0.1);
+    --tag-text: #666;
+    --arrow-color: #666;
+}
+
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-icons {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.article-card {
+    position: relative;
+}
+
+.article-card .arrow-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: var(--arrow-color);
+    opacity: 0.6;
+    transition: transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+}
+
+.article-card:hover .arrow-icon {
+    transform: translateX(5px);
+    opacity: 1;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.tag:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+:root {
     /* Light theme (default) */
     --primary-font: 'Playfair Display', serif;
     --secondary-font: 'Lato', sans-serif;
